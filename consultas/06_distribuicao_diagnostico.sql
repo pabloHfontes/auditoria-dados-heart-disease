@@ -1,0 +1,4 @@
+SELECT num, COUNT(*) AS total
+FROM heart
+GROUP BY num
+ORDER BY CAST(num AS INTEGER);

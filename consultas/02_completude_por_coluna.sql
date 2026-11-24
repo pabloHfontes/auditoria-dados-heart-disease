@@ -1,0 +1,14 @@
+SELECT 'idade' AS coluna, SUM(CASE WHEN age IS NULL OR age = '' THEN 1 ELSE 0 END) AS faltantes FROM heart
+UNION ALL SELECT 'sexo', SUM(CASE WHEN sex IS NULL OR sex = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'tipo_dor', SUM(CASE WHEN cp IS NULL OR cp = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'pressao', SUM(CASE WHEN trestbps IS NULL OR trestbps = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'colesterol', SUM(CASE WHEN chol IS NULL OR chol = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'acucar_jejum', SUM(CASE WHEN fbs IS NULL OR fbs = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'ecg_repouso', SUM(CASE WHEN restecg IS NULL OR restecg = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'fc_max', SUM(CASE WHEN thalch IS NULL OR thalch = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'angina_exercicio', SUM(CASE WHEN exang IS NULL OR exang = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'oldpeak', SUM(CASE WHEN oldpeak IS NULL OR oldpeak = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'slope', SUM(CASE WHEN slope IS NULL OR slope = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'ca', SUM(CASE WHEN ca IS NULL OR ca = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'thal', SUM(CASE WHEN thal IS NULL OR thal = '' THEN 1 ELSE 0 END) FROM heart
+UNION ALL SELECT 'num', SUM(CASE WHEN num IS NULL OR num = '' THEN 1 ELSE 0 END) FROM heart;

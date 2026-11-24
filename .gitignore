@@ -1,0 +1,5 @@
+*.db-journal
+*.db-wal
+*.db-shm
+.DS_Store
+.~lock.heart_disease_uci.csv#
